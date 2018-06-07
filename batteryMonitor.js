@@ -70,6 +70,12 @@ while (True){
 	    	console.log((time-lasttime)/1000000.0)
 	    	console.log("s mA: ")
 	    	console.log(mA)
+	})
+	
+	process.on('SIGINT', function () {
+		led.unexport()
+		button.unexport()
+	  })
 }
 	
 		
